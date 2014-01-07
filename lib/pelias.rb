@@ -27,7 +27,7 @@ module Pelias
 
   autoload :Search, 'pelias/search'
 
-  env = ENV['RACK_ENV'] || 'development'
+  env = ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
 
   # elasticsearch
   ES_TIMEOUT = 1200
